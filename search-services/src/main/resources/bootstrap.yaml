@@ -1,0 +1,7 @@
+spring:
+   application:
+      name: search-services
+   cloud:
+      uri: http://localhost:8888
+      label: latest
+      profile: dev

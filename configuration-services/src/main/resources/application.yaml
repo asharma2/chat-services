@@ -1,0 +1,16 @@
+server:
+   port: 8888
+spring:
+   profiles:
+      active: jdbc
+   cloud:
+      config:
+         server:
+            jdbc:
+               sql: SELECT PROPERTIES.KY, PROPERTIES.VAL from PROPERTIES where APPLICATION=? and PROFILE=? and LABEL=?
+               order: 1
+   datasource:
+      url: jdbc:mysql://localhost:3306/chatservices?useSSL=false
+      username: root
+      password: root
+      driver-class-name: org.mariadb.jdbc.Driver

@@ -1,0 +1,6 @@
+spring:
+   application:
+      name: sentiment-services
+   config:
+      cloud:
+         uri: http://localhost:8888
